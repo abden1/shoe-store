@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر الأحذية</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@700&family=Rakkas&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- القائمة العلوية -->
+    <nav class="main-nav">
+        <div class="logo">
+            <a href="index.html">العربية</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="#products">منتجاتنا</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+            <li><a href="#" id="profileLink" onclick="handleAuthClick(event)">تسجيل الدخول</a></li>
+        </ul>
+        <div class="cart-icon">
+            <span class="material-icons">🛒</span>
+            <span class="cart-count">0</span>
+            <div class="cart-dropdown">
+                <div class="cart-items">
+                    <!-- ستتم إضافة العناصر هنا بواسطة JavaScript -->
+                </div>
+                <div class="cart-total">
+                    <span>المجموع:</span>
+                    <span class="total-amount">0 جنيه</span>
+                </div>
+                <button class="checkout-btn" onclick="goToCheckout()">إتمام الشراء</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- القسم الرئيسي -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>أجمل الأحذية العصرية</h1>
+            <p>اختر حذاءك المفضل من تشكيلتنا المميزة</p>
+            <a href="#products" class="cta-button">تسوق الآن</a>
+        </div>
+    </header>
+
+    <!-- قسم المنتجات -->
+    <section id="products" class="products">
+        <h2>منتجاتنا المميزة</h2>
+        <div class="products-grid">
+            <!-- سيتم إضافة المنتجات هنا بواسطة JavaScript -->
+        </div>
+    </section>
+
+    <!-- قسم المميزات -->
+    <section id="features" class="features-section">
+        <div class="section-header">
+            <h2>لماذا تختار العربية؟</h2>
+            <p>نقدم لكم مجموعة من المميزات التي تجعلنا خياركم الأول</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-box">
+                <div class="feature-icon">🌟</div>
+                <h3>جودة عالمية</h3>
+                <p>نوفر لكم أفضل الأحذية من أشهر الماركات العالمية مع ضمان الجودة والأصالة</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon">🚚</div>
+                <h3>توصيل سريع</h3>
+                <p>نضمن لكم توصيل سريع وآمن لجميع الطلبات مع إمكانية التتبع المباشر</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon">💰</div>
+                <h3>أسعار تنافسية</h3>
+                <p>نقدم أفضل الأسعار في السوق مع ضمان مطابقة أي سعر أقل تجدونه</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon">🔄</div>
+                <h3>استبدال مجاني</h3>
+                <p>نوفر خدمة الاستبدال المجاني خلال ١٤ يوم مع ضمان رضاكم التام</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon">💎</div>
+                <h3>تشكيلة متنوعة</h3>
+                <p>نوفر تشكيلة واسعة من الأحذية لتناسب جميع الأذواق والمناسبات</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon">🎁</div>
+                <h3>مكافآت وهدايا</h3>
+                <p>نقدم برنامج ولاء مميز مع نقاط وهدايا حصرية لعملائنا الدائمين</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="index.html#products">المنتجات</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                    <li><a href="profile.html">الملف الشخصي</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>تواصل معنا</h3>
+                <p>📱 0123456789</p>
+                <p>✉️ info@alarabia.com</p>
+                <p>📍 العنوان: شارع التحرير، القاهرة</p>
+            </div>
+            <div class="footer-section">
+                <h3>تابعنا على</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>النشرة البريدية</h3>
+                <p>اشترك للحصول على آخر العروض والتحديثات</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="البريد الإلكتروني">
+                    <button>اشترك</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>جميع الحقوق محفوظة © 2024 متجر الأحذية</p>
+            <div class="footer-links">
+                <a href="#">سياسة الخصوصية</a>
+                <span>|</span>
+                <a href="#">الشروط والأحكام</a>
+                <span>|</span>
+                <a href="#">سياسة الترجيع</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- تضمين ملفات JavaScript -->
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+    <script src="features.js"></script>
+    <script src="auth.js"></script>
+    <script>
+        // عرض المنتجات في الصفحة
+        document.addEventListener('DOMContentLoaded', function() {
+            const productsGrid = document.querySelector('.products-grid');
+            
+            products.forEach(product => {
+                const productCard = `
+                    <div class="product-card">
+                        <img src="${product.image}" alt="${product.name}" class="product-image">
+                        <h3 class="product-name">${product.name}</h3>
+                        <div class="product-price">${product.price} جنيه</div>
+                        <button class="add-to-cart-btn" onclick="addToCart(${product.id})">
+                            أضف إلى السلة
+                        </button>
+                    </div>
+                `;
+                productsGrid.innerHTML += productCard;
+            });
+        });
+
+        // تبديل عرض السلة
+        function toggleCart() {
+            const cartDropdown = document.querySelector('.cart-dropdown');
+            cartDropdown.classList.toggle('show');
+        }
+
+        // إغلاق السلة عند النقر خارجها
+        document.addEventListener('click', function(event) {
+            const cartIcon = document.querySelector('.cart-icon');
+            const cartDropdown = document.querySelector('.cart-dropdown');
+            
+            if (!cartIcon.contains(event.target)) {
+                cartDropdown.classList.remove('show');
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إتمام الشراء - العربية</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@700&family=Rakkas&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- القائمة العلوية -->
+    <nav class="main-nav">
+        <div class="logo">
+            <a href="index.html">العربية</a>
+        </div>
+        <div class="nav-center">
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="index.html#products">منتجاتنا</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+                <li><a href="#" id="profileLink" onclick="handleAuthClick(event)">تسجيل الدخول</a></li>
+            </ul>
+        </div>
+        <div class="back-to-cart">
+            <a href="index.html" class="back-btn">
+                <span class="material-icons">arrow_forward</span>
+                العودة للتسوق
+            </a>
+        </div>
+    </nav>
+
+    <!-- نموذج إتمام الشراء -->
+    <div class="checkout-container">
+        <h1>إتمام الشراء</h1>
+        
+        <div class="checkout-form">
+            <form id="checkoutForm">
+                <!-- معلومات الشحن -->
+                <div class="form-section">
+                    <h2>معلومات الشحن</h2>
+                    <div class="form-group">
+                        <label for="fullName">الاسم الكامل</label>
+                        <input type="text" id="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">رقم الهاتف</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">العنوان</label>
+                        <textarea id="address" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">المدينة</label>
+                        <input type="text" id="city" required>
+                    </div>
+                </div>
+
+                <!-- معلومات الدفع -->
+                <div class="form-section">
+                    <h2>معلومات الدفع</h2>
+                    <div class="payment-methods">
+                        <div class="payment-method">
+                            <input type="radio" id="cashOnDelivery" name="paymentMethod" value="cash" checked>
+                            <label for="cashOnDelivery">الدفع عند الاستلام</label>
+                        </div>
+                        <div class="payment-method">
+                            <input type="radio" id="creditCard" name="paymentMethod" value="card">
+                            <label for="creditCard">بطاقة ائتمان</label>
+                        </div>
+                    </div>
+                    
+                    <!-- حقول بطاقة الائتمان -->
+                    <div id="creditCardFields" style="display: none;">
+                        <div class="form-group">
+                            <label for="cardNumber">رقم البطاقة</label>
+                            <input type="text" id="cardNumber" maxlength="16">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiryDate">تاريخ الانتهاء</label>
+                                <input type="text" id="expiryDate" placeholder="MM/YY" maxlength="5">
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" maxlength="3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ملخص الطلب -->
+                <div class="form-section order-summary">
+                    <h2>ملخص الطلب</h2>
+                    <div id="orderItems">
+                        <!-- سيتم إضافة عناصر السلة هنا عبر JavaScript -->
+                    </div>
+                    <div class="order-totals">
+                        <div class="total-row">
+                            <span>المجموع الفرعي:</span>
+                            <span class="subtotal-amount">0 جنيه</span>
+                        </div>
+                        <div class="total-row">
+                            <span>رسوم الشحن:</span>
+                            <span>50 جنيه</span>
+                        </div>
+                        <div class="total-row total">
+                            <span>الإجمالي:</span>
+                            <span class="total-amount">0 جنيه</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- زر تأكيد الطلب -->
+                <button type="button" id="confirmOrder" class="confirm-order-btn">تأكيد الطلب</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- إشعارات -->
+    <div id="toast" class="toast"></div>
+
+    <!-- تضمين ملفات JavaScript -->
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+    <script src="checkout.js"></script>
+    <script>
+        // التأكد من وجود منتجات في السلة
+        document.addEventListener('DOMContentLoaded', function() {
+            const cart = JSON.parse(localStorage.getItem('cart'));
+            if (!cart || cart.items.length === 0) {
+                alert('السلة فارغة!');
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+</html>

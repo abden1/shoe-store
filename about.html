@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من نحن - متجر الأحذية</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@700&family=Rakkas&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- القائمة العلوية -->
+    <nav class="main-nav">
+        <div class="logo">
+            <a href="index.html">العربية</a>
+        </div>
+        <div class="nav-center">
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="index.html#products">منتجاتنا</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+                <li><a href="#" id="profileLink" onclick="handleAuthClick(event)">تسجيل الدخول</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- زر الرجوع -->
+    <div class="back-button">
+        <a href="index.html" class="back-link">
+            <span class="back-icon">←</span>
+            <span class="back-text">العودة للرئيسية</span>
+        </a>
+    </div>
+
+    <!-- صفحة من نحن -->
+    <div class="about-container">
+        <div class="about-hero">
+            <div class="hero-content">
+                <h1>مرحباً بكم في العربية</h1>
+                <p>نقدم لكم أفضل الأحذية العصرية بأسعار مناسبة منذ عام ٢٠١٠</p>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <div class="section-header">
+                <h2>قصة نجاحنا</h2>
+                <p>بدأنا رحلتنا بحلم بسيط وتطورنا لنصبح من أكبر متاجر الأحذية في المنطقة</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="icon">🎯</div>
+                    <h3>رؤيتنا</h3>
+                    <p>نسعى لأن نكون الوجهة الأولى لكل من يبحث عن التميز في عالم الأحذية، مع تقديم تجربة تسوق فريدة تجمع بين الجودة والأناقة والراحة.</p>
+                </div>
+
+                <div class="about-card">
+                    <div class="icon">💫</div>
+                    <h3>رسالتنا</h3>
+                    <p>توفير أحذية عصرية عالية الجودة تناسب جميع الأذواق والمناسبات، مع ضمان أفضل تجربة تسوق لعملائنا الكرام.</p>
+                </div>
+
+                <div class="about-card">
+                    <div class="icon">🤝</div>
+                    <h3>قيمنا</h3>
+                    <p>نؤمن بالجودة والأمانة والشفافية في تعاملاتنا، ونضع رضا العملاء في مقدمة أولوياتنا.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-section">
+            <div class="stat-item">
+                <span class="stat-number">١٠٠٠+</span>
+                <span class="stat-label">عميل سعيد</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">٥٠+</span>
+                <span class="stat-label">ماركة عالمية</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">١٤</span>
+                <span class="stat-label">سنة خبرة</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">٢٤/٧</span>
+                <span class="stat-label">دعم العملاء</span>
+            </div>
+        </div>
+
+        <div class="features-section">
+            <div class="section-header">
+                <h2>لماذا تختار العربية؟</h2>
+                <p>نقدم لكم مجموعة من المميزات التي تجعلنا خياركم الأول</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">💰</div>
+                    <h3>أسعار تنافسية</h3>
+                    <p>نقدم أفضل الأسعار في السوق مع ضمان مطابقة أي سعر أقل تجدونه</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">🚚</div>
+                    <h3>توصيل سريع</h3>
+                    <p>نضمن لكم توصيل سريع وآمن لجميع الطلبات مع إمكانية التتبع المباشر</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">🌟</div>
+                    <h3>جودة عالمية</h3>
+                    <p>نوفر لكم أفضل الأحذية من أشهر الماركات العالمية مع ضمان الجودة والأصالة</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">🎁</div>
+                    <h3>مكافآت وهدايا</h3>
+                    <p>نقدم برنامج ولاء مميز مع نقاط وهدايا حصرية لعملائنا الدائمين</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">💎</div>
+                    <h3>تشكيلة متنوعة</h3>
+                    <p>نوفر تشكيلة واسعة من الأحذية لتناسب جميع الأذواق والمناسبات</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">🔄</div>
+                    <h3>استبدال مجاني</h3>
+                    <p>نوفر خدمة الاستبدال المجاني خلال ١٤ يوم مع ضمان رضاكم التام</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="products-showcase">
+            <div class="section-header">
+                <h2>تشكيلة أحذيتنا المميزة</h2>
+                <p>اكتشف أحدث موديلات الأحذية العصرية</p>
+            </div>
+
+            <div class="slideshow-container">
+                <!-- الشريحة الأولى -->
+                <div class="slide fade">
+                    <div class="slide-image">
+                        <img src="images/products/shoe1.jpg" alt="حذاء رياضي">
+                    </div>
+                    <div class="slide-content">
+                        <h3>حذاء رياضي فاخر</h3>
+                        <p>تصميم عصري مع راحة مثالية</p>
+                    </div>
+                </div>
+
+                <!-- الشريحة الثانية -->
+                <div class="slide fade">
+                    <div class="slide-image">
+                        <img src="images/products/shoe2.jpg" alt="حذاء كاجوال">
+                    </div>
+                    <div class="slide-content">
+                        <h3>حذاء كاجوال أنيق</h3>
+                        <p>مناسب لجميع الأوقات</p>
+                    </div>
+                </div>
+
+                <!-- الشريحة الثالثة -->
+                <div class="slide fade">
+                    <div class="slide-image">
+                        <img src="images/products/shoe3.jpg" alt="حذاء رسمي">
+                    </div>
+                    <div class="slide-content">
+                        <h3>حذاء رسمي كلاسيكي</h3>
+                        <p>أناقة تناسب مناسباتك الرسمية</p>
+                    </div>
+                </div>
+
+                <!-- أزرار التنقل -->
+                <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+                <button class="next" onclick="plusSlides(1)">&#10095;</button>
+            </div>
+
+            <!-- نقاط التنقل -->
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </section>
+
+        <div class="brands-section">
+            <div class="section-header">
+                <h2>شركاؤنا</h2>
+                <p>نفتخر بشراكتنا مع أفضل الماركات العالمية</p>
+            </div>
+            <div class="brands-grid">
+                <div class="brand-item">Nike</div>
+                <div class="brand-item">Adidas</div>
+                <div class="brand-item">Puma</div>
+                <div class="brand-item">New Balance</div>
+                <div class="brand-item">Under Armour</div>
+                <div class="brand-item">Reebok</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="index.html#products">المنتجات</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                    <li><a href="profile.html">الملف الشخصي</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>تواصل معنا</h3>
+                <p>📱 0123456789</p>
+                <p>✉️ info@alarabia.com</p>
+                <p>📍 العنوان: شارع التحرير، القاهرة</p>
+            </div>
+            <div class="footer-section">
+                <h3>تابعنا على</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>النشرة البريدية</h3>
+                <p>اشترك للحصول على آخر العروض والتحديثات</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="البريد الإلكتروني">
+                    <button>اشترك</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>جميع الحقوق محفوظة © 2024 متجر الأحذية</p>
+            <div class="footer-links">
+                <a href="#">سياسة الخصوصية</a>
+                <span>|</span>
+                <a href="#">الشروط والأحكام</a>
+                <span>|</span>
+                <a href="#">سياسة الترجيع</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+    <script src="cart.js"></script>
+    <script src="products.js"></script>
+    <script src="slider.js"></script>
+    <script src="about-slider.js"></script>
+    <script src="https://kit.fontawesome.com/your-code.js"></script>
+</body>
+</html>

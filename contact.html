@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا - متجر الأحذية</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@700&family=Rakkas&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- القائمة العلوية -->
+    <nav class="main-nav">
+        <div class="logo">
+            <a href="index.html">العربية</a>
+        </div>
+        <div class="nav-center">
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="index.html#products">منتجاتنا</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+                <li><a href="#" id="profileLink" onclick="handleAuthClick(event)">تسجيل الدخول</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- صفحة تواصل معنا -->
+    <div class="contact-page">
+        <div class="contact-header">
+            <h1>تواصل معنا</h1>
+            <p>يسعدنا تواصلكم معنا في أي وقت</p>
+        </div>
+
+        <div class="contact-container">
+            <!-- معلومات التواصل -->
+            <div class="contact-info">
+                <div class="info-card">
+                    <div class="info-icon">📱</div>
+                    <h3>اتصل بنا</h3>
+                    <p>٠١٢٣٤٥٦٧٨٩</p>
+                    <p>٠١١٢٢٣٣٤٤٥٥</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">✉️</div>
+                    <h3>البريد الإلكتروني</h3>
+                    <p>info@alarabia.com</p>
+                    <p>support@alarabia.com</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">🕒</div>
+                    <h3>ساعات العمل</h3>
+                    <p>السبت - الخميس</p>
+                    <p>١٠ صباحاً - ١٠ مساءً</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">📍</div>
+                    <h3>العنوان</h3>
+                    <p>شارع التحرير</p>
+                    <p>القاهرة، مصر</p>
+                </div>
+            </div>
+
+            <!-- نموذج التواصل -->
+            <div class="contact-form-container">
+                <h2>أرسل لنا رسالة</h2>
+                <form class="contact-form" onsubmit="handleSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">الاسم بالكامل</label>
+                            <input type="text" id="name" required placeholder="أدخل اسمك الكريم">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف</label>
+                            <input type="tel" id="phone" required placeholder="أدخل رقم هاتفك">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني</label>
+                        <input type="email" id="email" required placeholder="example@domain.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">الموضوع</label>
+                        <input type="text" id="subject" required placeholder="موضوع رسالتك">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">الرسالة</label>
+                        <textarea id="message" rows="6" required placeholder="اكتب رسالتك هنا..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        إرسال الرسالة
+                        <span class="btn-icon">📨</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="index.html#products">المنتجات</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                    <li><a href="profile.html">الملف الشخصي</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>تواصل معنا</h3>
+                <p>📞 0123456789</p>
+                <p>📧 info@alarabia.com</p>
+                <p>📍 العنوان: شارع التحرير، القاهرة</p>
+            </div>
+            <div class="footer-section">
+                <h3>تابعنا على</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>النشرة البريدية</h3>
+                <p>اشترك للحصول على آخر العروض والتحديثات</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="البريد الإلكتروني" class="newsletter-input">
+                    <button class="newsletter-btn">اشتراك</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>جميع الحقوق محفوظة © 2024 متجر الأحذية</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+    <script src="products.js"></script>
+    <script src="contact.js"></script>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            // التحقق من صحة البيانات
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+            
+            if (name && email && phone && message) {
+                // إظهار رسالة نجاح
+                showNotification('تم إرسال رسالتك بنجاح! سنتواصل معك قريباً');
+                event.target.reset();
+            }
+        }
+
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => notification.classList.add('show'), 100);
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
